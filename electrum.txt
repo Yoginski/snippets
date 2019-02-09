@@ -1,0 +1,23 @@
+wget https://raw.githubusercontent.com/LedgerHQ/udev-rules/master/add_udev_rules.sh
+cat add_udev_rules.sh
+sudo bash add_udev_rules.sh
+
+apt install libusb-1.0.0-dev
+apt install libudev-dev
+
+pip3 install --user btchip-python
+pip3 install --user https://download.electrum.org/3.3.3/Electrum-3.3.3.tar.gz#egg=electrum[fast]
+
+cp electrum.desktop .local/share/applications/
+cp ~/.local/lib/python3.6/site-packages/home/user/.local/share/icons/electrum.png ~/.local/share/icons/
+
+
+cp eps-config.cfg ~/.config/electrum-personal-server/config.cfg
+
+# Run electrum
+# Master public key: Wallet -> Information -> Master Public Key
+# ~/.config/electrum-personal-server/config.cfg
+# Set "rpc_user", "rpc_password" and "default" (default = <Master public key>)
+
+# Alias from .bashrc
+eps-start
