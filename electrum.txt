@@ -23,7 +23,7 @@ pip3 install --user btchip-python
 pip3 install --user https://download.electrum.org/3.3.3/Electrum-3.3.3.tar.gz#egg=electrum[fast]
 
 cp electrum.desktop .local/share/applications/
-cp ~/.local/lib/python3.6/site-packages/home/user/.local/share/icons/electrum.png ~/.local/share/icons/
+cp ~/.local/lib/python3.6/site-packages${HOME}/.local/share/icons/electrum.png ~/.local/share/icons/
 
 git clone https://github.com/chris-belcher/electrum-personal-server
 cd electrum-personal-server
