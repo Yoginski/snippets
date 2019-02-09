@@ -1,0 +1,14 @@
+[Unit]
+Description=Electrum Personal Server
+#After=bitcoind.service
+#Requires=bitcoind.service
+
+[Service]
+ExecStart=%h/.local/bin/electrum-personal-server %h/.local/etc/electrum-personal-server/config.cfg
+Type=simple
+Restart=on-failure
+RestartSec=30
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
